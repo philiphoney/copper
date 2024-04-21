@@ -1,0 +1,18 @@
+{
+  "name": "copper",
+  "version": "0.2.0",
+  "description": "front-end framework for developing",
+  "homepage": "",
+  "author": "philip",
+  "license": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philiphoney/copper.git"
+  },
+  "root": "https://raw.githubusercontent.com/philiphoney/copper/main/",
+  "scripts": [
+    "dist/css/copper.css",
+    "dist/css/copper.min.css",
+    "dist/js/copper.js"
+  ]
+}

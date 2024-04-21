@@ -87,3 +87,49 @@ body {
     border-radius: 20px;
     border: 2px solid var(--cu-gray-medium);
 }
+
+.header-f {
+    width: 100%;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+.jc-center, .jc-c {
+    display: flex;
+    justify-content: center;
+}
+
+.jc-space-around, .jc-sa {
+    display: flex;
+    justify-content:space-around;
+}
+
+.jc-space-between, .jc-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-f {
+    display: flex;
+}
+
+.d-b {
+    display: block;
+}
+
+.td-none, .td-n {
+    text-decoration: none;
+}
+
+.td-underline, .td-u {
+    text-decoration: underline;
+}
+
+a {
+    color: var(--cu-gray-dark);
+}
+
+a:hover {
+    color: var(--cu-gray-darker);
+}

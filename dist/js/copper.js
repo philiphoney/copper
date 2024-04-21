@@ -1,4 +1,4 @@
-const onerror = false
+const onerror = true
 
 window.onerror = function (message, source, lineno, colno, error) {
     if (!(message === "TypeError: i.createPopper is not a function") && onerror) {
