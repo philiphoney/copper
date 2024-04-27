@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/philiphoney/copper.git",
-    "sha": "bb54c89ef0b02a41d90486e40f407dd8d221a571"
+    "sha": "6597cf70e1606ea2c33f3224277d01680477462e"
   },
   "root": "api.github",
   "scripts": []
