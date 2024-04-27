@@ -1,24 +1,59 @@
-const onerror = true
+function toggleMode() {
+  const currentTheme = document.documentElement.getAttribute('data-cu-theme');
+  let newTheme;
+  if (currentTheme === 'light') {
+      newTheme = 'dark';
+  } else {
+      newTheme = 'light';
+  }
+  setThemePreference(newTheme);
+}
 
-window.onerror = function (message, source, lineno, colno, error) {
-    if (!(message === "TypeError: i.createPopper is not a function") && onerror) {
-        var html = `
-            <div class="alert-w" role="alert">
-               <div><b>${message}</b> <br> <a target="_blank" href="${source}">${source}</a> Line: ${lineno} Column: ${colno}</div>
-            </div>`;
-        document.body.insertAdjacentHTML('beforeend', html);
-        document.title = `(! Error)`;
-    }
-};
+function setThemePreference(theme) {
+  document.documentElement.setAttribute('data-cu-theme', theme);
+  localStorage.setItem('theme', theme);
+}
+
+function setIconBasedOnTheme() {
+  const currentTheme = document.documentElement.getAttribute('data-cu-theme');
+  if (currentTheme === 'dark') {} else {}
+}
+
+const currentTheme = localStorage.getItem('theme');
+if (!currentTheme) {
+  setThemePreference('dark');
+}
+setThemePreference(currentTheme || 'light');
+setIconBasedOnTheme();
+
 
 function p(value) {
-    console.log(value)
+  console.log(value);
 }
 
 function display(value) {
-    var display = `
-    <div class="display" role="alert">
-        <div>${value}</div>
-    </div>`;
-    document.body.insertAdjacentHTML('beforeend', display);
+  var display = `<div class="display" role="alert"><div>${value}</div></div>`;
+  document.body.insertAdjacentHTML("beforeend", display);
+}
+
+function clipboard(text) {
+  var dummy = document.createElement("textarea");
+  dummy.value = text;
+  document.body.appendChild(dummy);
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+}
+
+function cu_import(scriptPath, attribute = "") {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement("script");
+    script.src = scriptPath;
+    if (attribute) {
+      script.setAttribute(attribute, "");
+    }
+    script.onload = resolve;
+    script.onerror = reject; 
+    document.head.appendChild(script);
+  });
 }

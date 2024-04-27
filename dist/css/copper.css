@@ -28,19 +28,22 @@
     --cu-black: #000000;
 
     --text-color: var(--cu-dark-blue);
-    --bg-color: var(--cu-gray-light);
+    --bg-color: var(--cu-gray-lightest);
 }
 
 /* Light Mode Styles */
-[data-theme="light"] {
-    --bg-color: var(--cu-gray-light);
+[data-cu-theme="light"] {
     --text-color: var(--text-color);
 }
 
 /* Dark Mode Styles */
-[data-theme="dark"] {
+[data-cu-theme="dark"] {
     --bg-color: var(--cu-gray-darker);
     --text-color: var(--cu-gray-lightest);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {

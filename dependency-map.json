@@ -1,18 +1,15 @@
 {
   "name": "copper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "front-end framework for developing",
-  "homepage": "",
+  "homepage": "https://github.com/philiphoney/copper",
   "author": "philip",
   "license": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/philiphoney/copper.git"
+    "url": "https://github.com/philiphoney/copper.git",
+    "sha": "bb54c89ef0b02a41d90486e40f407dd8d221a571"
   },
-  "root": "https://raw.githubusercontent.com/philiphoney/copper/main/",
-  "scripts": [
-    "dist/css/copper.css",
-    "dist/css/copper.min.css",
-    "dist/js/copper.js"
-  ]
+  "root": "api.github",
+  "scripts": []
 }
